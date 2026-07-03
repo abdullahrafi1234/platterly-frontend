@@ -1,6 +1,7 @@
 import Categories from "@/components/home/Categories";
 import FeaturedMeals from "@/components/home/FeaturedMeals";
 import Hero from "@/components/home/Hero";
+import HowItWorks from "@/components/home/HowItWorks";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Categories></Categories>
       <FeaturedMeals></FeaturedMeals>
+      <HowItWorks />
     </>
   );
 }
