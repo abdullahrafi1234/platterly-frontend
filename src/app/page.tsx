@@ -1,4 +1,5 @@
 import Categories from "@/components/home/Categories";
+import FeaturedMeals from "@/components/home/FeaturedMeals";
 import Hero from "@/components/home/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Categories></Categories>
+      <FeaturedMeals></FeaturedMeals>
     </>
   );
 }
