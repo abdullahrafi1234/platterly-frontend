@@ -6,6 +6,7 @@ import { useAuth } from "@/modules/auth/authContext";
 import { getMealById } from "@/modules/meal/mealApi";
 import { useCart } from "@/modules/order/cartContext";
 import { getMealReviews } from "@/modules/review/reviewApi";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -56,7 +57,12 @@ export default function MealDetailsPage() {
           <h1 className="font-display text-3xl font-semibold mb-2">
             {meal.name}
           </h1>
-          <p className="text-ink/50 mb-4">{meal.provider.businessName}</p>
+          <Link
+            href={`/providers/${meal.provider.id}`}
+            className="inline-flex items-center gap-1 text-sm font-mono border border-ink/20 rounded-full px-3 py-1 mb-4 hover:bg-ink hover:text-cream transition-colors"
+          >
+            {meal.provider.businessName} →
+          </Link>
           <p className="text-ink/70 mb-6">{meal.description}</p>
           <p className="font-mono text-chili text-2xl mb-6">
             ৳{meal.price.toFixed(2)}
