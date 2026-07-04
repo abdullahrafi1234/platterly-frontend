@@ -2,6 +2,7 @@
 
 import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/modules/auth/authContext";
 import { getMealById } from "@/modules/meal/mealApi";
 import { useCart } from "@/modules/order/cartContext";
 import { getMealReviews } from "@/modules/review/reviewApi";
@@ -15,6 +16,7 @@ export default function MealDetailsPage() {
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
+  const { user } = useAuth();
 
   const handleAddToCart = () => {
     addToCart(meal, 1);
@@ -59,12 +61,14 @@ export default function MealDetailsPage() {
           <p className="font-mono text-chili text-2xl mb-6">
             ৳{meal.price.toFixed(2)}
           </p>
-          <Button
-            className="bg-chili hover:bg-chili/90 text-white"
-            onClick={handleAddToCart}
-          >
-            {added ? "Added ✓" : "Add to Cart"}
-          </Button>
+          {(!user || user.role === "CUSTOMER") && (
+            <Button
+              className="bg-chili hover:bg-chili/90 text-white"
+              onClick={handleAddToCart}
+            >
+              {added ? "Added ✓" : "Add to Cart"}
+            </Button>
+          )}
         </div>
       </div>
 
