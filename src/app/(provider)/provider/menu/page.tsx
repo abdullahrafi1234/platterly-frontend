@@ -37,6 +37,7 @@ export default function ProviderMenu() {
     description: "",
     price: "",
     categoryId: "",
+    image: "",
   });
   const [error, setError] = useState("");
 
@@ -49,7 +50,13 @@ export default function ProviderMenu() {
 
   const openAdd = () => {
     setEditing(null);
-    setForm({ name: "", description: "", price: "", categoryId: "" });
+    setForm({
+      name: "",
+      description: "",
+      price: "",
+      categoryId: "",
+      image: "",
+    });
     setOpen(true);
   };
 
@@ -60,6 +67,7 @@ export default function ProviderMenu() {
       description: meal.description || "",
       price: String(meal.price),
       categoryId: meal.category.id,
+      image: meal.image || "",
     });
     setOpen(true);
   };
@@ -68,7 +76,11 @@ export default function ProviderMenu() {
     e.preventDefault();
     setError("");
     try {
-      const payload = { ...form, price: parseFloat(form.price) };
+      const payload = {
+        ...form,
+        price: parseFloat(form.price),
+        image: form.image || undefined,
+      };
       if (editing) {
         await updateMeal(editing.id, payload);
       } else {
@@ -126,6 +138,11 @@ export default function ProviderMenu() {
                 required
                 value={form.price}
                 onChange={(e) => setForm({ ...form, price: e.target.value })}
+              />
+              <Input
+                placeholder="Image URL (optional)"
+                value={form.image}
+                onChange={(e) => setForm({ ...form, image: e.target.value })}
               />
               <Select
                 value={form.categoryId}
