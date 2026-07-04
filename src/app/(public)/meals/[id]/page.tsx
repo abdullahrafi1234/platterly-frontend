@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { getMealById } from "@/modules/meal/mealApi";
+import { useCart } from "@/modules/order/cartContext";
 import { getMealReviews } from "@/modules/review/reviewApi";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -11,6 +12,14 @@ export default function MealDetailsPage() {
   const [meal, setMeal] = useState<any>(null);
   const [reviews, setReviews] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(meal, 1);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1500);
+  };
 
   useEffect(() => {
     Promise.all([getMealById(id as string), getMealReviews(id as string)])
@@ -49,8 +58,11 @@ export default function MealDetailsPage() {
           <p className="font-mono text-chili text-2xl mb-6">
             ৳{meal.price.toFixed(2)}
           </p>
-          <Button className="bg-chili hover:bg-chili/90 text-white">
-            Add to Cart
+          <Button
+            className="bg-chili hover:bg-chili/90 text-white"
+            onClick={handleAddToCart}
+          >
+            {added ? "Added ✓" : "Add to Cart"}
           </Button>
         </div>
       </div>
