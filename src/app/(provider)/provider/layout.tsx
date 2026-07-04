@@ -23,7 +23,7 @@ export default function ProviderLayout({
 
   return (
     <div className="container mx-auto px-4 py-8 flex gap-8">
-      <aside className="w-48 shrink-0">
+      <aside className="hidden md:block w-48 shrink-0">
         <nav className="flex flex-col gap-1">
           {links.map((link) => (
             <Link
@@ -38,7 +38,7 @@ export default function ProviderLayout({
           ))}
         </nav>
       </aside>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 min-w-0">{children}</main>
     </div>
   );
 }
