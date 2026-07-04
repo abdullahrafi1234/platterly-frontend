@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -40,8 +41,12 @@ export default function ProviderMenu() {
     image: "",
   });
   const [error, setError] = useState("");
+  const [pageLoading, setPageLoading] = useState(true);
 
-  const loadMeals = () => getMyMeals().then((res) => setMeals(res.data));
+  const loadMeals = () =>
+    getMyMeals()
+      .then((res) => setMeals(res.data))
+      .finally(() => setPageLoading(false));
 
   useEffect(() => {
     loadMeals();
@@ -98,6 +103,8 @@ export default function ProviderMenu() {
     await deleteMeal(id);
     loadMeals();
   };
+
+  if (pageLoading) return <Loader />;
 
   return (
     <div>

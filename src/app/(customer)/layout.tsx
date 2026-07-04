@@ -1,6 +1,5 @@
 "use client";
 import Loader from "@/components/shared/Loader";
-
 import { useRequireRole } from "@/hooks/useRequireRole";
 
 export default function CustomerLayout({

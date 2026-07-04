@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import { getProviderOrders, updateOrderStatus } from "@/modules/order/orderApi";
 import { useEffect, useState } from "react";
@@ -28,7 +29,7 @@ export default function ProviderOrders() {
     loadOrders();
   };
 
-  if (loading) return <p className="font-mono text-ink/50">Loading...</p>;
+  if (loading) return <Loader />;
 
   return (
     <div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import { getMealById } from "@/modules/meal/mealApi";
 import { useCart } from "@/modules/order/cartContext";
@@ -30,7 +31,7 @@ export default function MealDetailsPage() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <p className="p-12 font-mono text-ink/50">Loading...</p>;
+  if (loading) return <Loader />;
   if (!meal)
     return <p className="p-12 font-mono text-ink/50">Meal not found.</p>;
 

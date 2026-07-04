@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { useRequireRole } from "@/hooks/useRequireRole";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,7 +19,7 @@ export default function ProviderLayout({
   const { loading } = useRequireRole("PROVIDER");
   const pathname = usePathname();
 
-  if (loading) return <p className="p-12 font-mono text-ink/50">Loading...</p>;
+  if (loading) return <Loader />;
 
   return (
     <div className="container mx-auto px-4 py-8 flex gap-8">

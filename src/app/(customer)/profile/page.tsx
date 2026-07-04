@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,12 +14,7 @@ export default function ProfilePage() {
   const [editing, setEditing] = useState(false);
   const [saving, setSaving] = useState(false);
 
-  if (loading)
-    return (
-      <p className="container mx-auto px-4 py-12 font-mono text-ink/50">
-        Loading...
-      </p>
-    );
+  if (loading) return <Loader />;
   if (!user) return null;
 
   const startEdit = () => {

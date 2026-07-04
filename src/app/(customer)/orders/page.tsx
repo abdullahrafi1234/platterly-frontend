@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import { cancelOrder, getMyOrders } from "@/modules/order/orderApi";
 import { useEffect, useState } from "react";
@@ -23,12 +24,7 @@ export default function CustomerOrders() {
     loadOrders();
   };
 
-  if (loading)
-    return (
-      <p className="container mx-auto px-4 py-12 font-mono text-ink/50">
-        Loading...
-      </p>
-    );
+  if (loading) return <Loader />;
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-2xl">

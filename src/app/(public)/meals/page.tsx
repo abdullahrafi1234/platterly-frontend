@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/shared/Loader";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -99,7 +100,7 @@ export default function MealsPage() {
 
       {/* Meals Grid */}
       {loading ? (
-        <p className="font-mono text-ink/50">Loading meals...</p>
+        <Loader></Loader>
       ) : meals.length === 0 ? (
         <p className="font-mono text-ink/50">No meals found.</p>
       ) : (
