@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider } from "@/modules/auth/authContext";
 import { CartProvider } from "@/modules/order/cartContext";
 import type { Metadata } from "next";
@@ -47,6 +48,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <Toaster />
           </CartProvider>
         </AuthProvider>
       </body>
