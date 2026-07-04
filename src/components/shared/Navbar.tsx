@@ -31,7 +31,10 @@ export default function Navbar() {
           {!loading && user && (
             <>
               {user.role === "CUSTOMER" && (
-                <Link href="/orders">My Orders</Link>
+                <>
+                  <Link href="/orders">My Orders</Link>
+                  <Link href="/profile">Profile</Link>
+                </>
               )}
               {user.role === "PROVIDER" && (
                 <Link href="/provider/dashboard">Dashboard</Link>
