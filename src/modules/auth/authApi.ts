@@ -30,6 +30,15 @@ export const logoutUser = async () => {
   return res.data;
 };
 
+export const updateProfile = async (data: {
+  name?: string;
+  phone?: string;
+  address?: string;
+}) => {
+  const res = await api.patch("/auth/me", data);
+  return res.data;
+};
+
 export const getMe = async () => {
   const res = await api.get("/auth/me");
   return res.data;
