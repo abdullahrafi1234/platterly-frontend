@@ -1,6 +1,7 @@
 import { getAllMeals } from "@/modules/meal/mealApi";
 import { Meal } from "@/types";
 
+// for auto fetch
 export const revalidate = 0;
 
 export default async function FeaturedMeals() {
