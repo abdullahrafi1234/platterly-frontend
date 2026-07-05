@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="border-b-2 border-dashed border-ink/20 py-24 px-4">
       <div className="container mx-auto text-center">
         <p className="font-mono text-sm text-chili tracking-widest mb-4">
-          ORDER #001 — TODAY&apos;S MENU
+          ORDER TODAY&apos;S MENU
         </p>
         <h1 className="font-display text-5xl md:text-7xl font-semibold leading-tight mb-6">
           Fresh meals, <br />

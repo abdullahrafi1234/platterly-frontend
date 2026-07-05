@@ -9,7 +9,7 @@ export default async function FeaturedMeals() {
     <section className="py-20 px-4 border-b-2 border-dashed border-ink/20">
       <div className="container mx-auto">
         <p className="font-mono text-sm text-mango tracking-widest mb-2 text-center">
-          03 — TODAY&apos;S PICKS
+          TODAY&apos;S PICKS
         </p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12 text-center">
           Featured meals

@@ -56,12 +56,12 @@ export default function Navbar() {
               <Link href="/provider/dashboard" onClick={() => setOpen(false)}>
                 Dashboard
               </Link>
-              <Link href="/provider/menu" onClick={() => setOpen(false)}>
+              {/* <Link href="/provider/menu" onClick={() => setOpen(false)}>
                 Menu
               </Link>
               <Link href="/provider/orders" onClick={() => setOpen(false)}>
                 Orders
-              </Link>
+              </Link> */}
             </>
           )}
           {user.role === "ADMIN" && (

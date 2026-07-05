@@ -8,7 +8,7 @@ export default async function Categories() {
     <section className="py-16 px-4 border-b-2 border-dashed border-ink/20">
       <div className="container mx-auto">
         <p className="font-mono text-sm text-herb tracking-widest mb-2">
-          02 — CATEGORIES
+          CATEGORIES
         </p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-8">
           Browse by cuisine

@@ -18,7 +18,7 @@ export default function HowItWorks() {
     <section className="py-20 px-4">
       <div className="container mx-auto text-center">
         <p className="font-mono text-sm text-herb tracking-widest mb-2">
-          04 — HOW IT WORKS
+          HOW IT WORKS
         </p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12">
           Three steps to your next meal
