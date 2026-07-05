@@ -67,9 +67,9 @@ export default function Navbar() {
           {user.role === "ADMIN" && (
             <>
               <Link href="/admin" onClick={() => setOpen(false)}>
-                Overview
+                Admin Dashboard
               </Link>
-              <Link href="/admin/users" onClick={() => setOpen(false)}>
+              {/* <Link href="/admin/users" onClick={() => setOpen(false)}>
                 Users
               </Link>
               <Link href="/admin/orders" onClick={() => setOpen(false)}>
@@ -77,7 +77,7 @@ export default function Navbar() {
               </Link>
               <Link href="/admin/categories" onClick={() => setOpen(false)}>
                 Categories
-              </Link>
+              </Link> */}
             </>
           )}
           <Button
