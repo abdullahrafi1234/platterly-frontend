@@ -2,8 +2,6 @@
 
 Platterly is a full-stack food ordering platform that connects hungry customers with local kitchens. Customers can browse meals by cuisine, check ratings and reviews, add items to their cart, and check out with cash on delivery or online payment. Restaurant owners get their own dashboard to manage their menu and track incoming orders in real time, from order placed to delivered. Admins have full oversight of the platform, including user management and order monitoring.
 
-This repository contains the frontend, built with a focus on a clean, responsive interface and a smooth ordering experience across devices.
-
 ## Live URL
 
 https://platterly-frontend.vercel.app
