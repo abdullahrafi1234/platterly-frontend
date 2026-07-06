@@ -27,3 +27,13 @@ export const cancelOrder = async (id: string) => {
   const res = await api.patch(`/orders/${id}/cancel`);
   return res.data;
 };
+
+export const initPayment = async (orderId: string) => {
+  const res = await api.post(`/payment/init/${orderId}`);
+  return res.data;
+};
+
+export const initStripePayment = async (orderId: string) => {
+  const res = await api.post(`/payment/stripe/init/${orderId}`);
+  return res.data;
+};
