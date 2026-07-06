@@ -25,7 +25,7 @@ Next.js (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Axios · Reac
 ### Clone the repository
 
 \`\`\`bash
-git clone https://github.com/abdullahrafi1234/platterly-backend.git
+git clone https://github.com/abdullahrafi1234/platterly-frontend.git
 cd platterly-frontend
 \`\`\`
 
