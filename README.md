@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Platterly — Frontend
+
+Platterly is a full-stack food ordering platform that connects hungry customers with local kitchens. Customers can browse meals by cuisine, check ratings and reviews, add items to their cart, and check out with cash on delivery or online payment. Restaurant owners get their own dashboard to manage their menu and track incoming orders in real time, from order placed to delivered. Admins have full oversight of the platform, including user management and order monitoring.
+
+This repository contains the frontend, built with a focus on a clean, responsive interface and a smooth ordering experience across devices.
+
+## Live URL
+
+https://platterly-frontend.vercel.app
+
+## Features
+
+- **Browsing** — search meals, filter by category and price range
+- **Ordering** — cart management, checkout with delivery address
+- **Payments** — Cash on Delivery, SSLCommerz, and Stripe
+- **Customer** — order history, cancellation, profile editing, reviews
+- **Provider** — menu management (add/edit/delete meals), order status updates, dashboard stats
+- **Admin** — user management (suspend/activate), platform-wide order overview, category management
+- **UX** — loading states, form validation, error handling, mobile-responsive design
+
+## Tech Stack
+
+Next.js (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Axios · React Context
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
+\`\`\`bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+\`\`\`
+NEXT_PUBLIC_API_URL=
+\`\`\`
